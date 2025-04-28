@@ -3,194 +3,436 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Portfolio</title>
+    <title>Kalkidan | Backend Developer</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <video autoplay loop muted playsinline class="back-video">
-            <source src="videos/galaxy.mp4" type="video/mp4">
+            <source src="https://assets.codepen.io/39255/stars.mp4" type="video/mp4">
         </video>
         
-        <header>
+        <header id="header">
             <div class="left">
-                <img src="images/miladicode.png" alt="logo">
-                <h1><span style="color: #72a1de;">Miladi</span> Code</h1>
+                <div class="logo">
+                    <i class='bx bx-code-alt'></i>
+                </div>
+                <h1><span>Kalkidan</span></h1>
             </div>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Projects</a></li>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
                 
-            </ul>
-                
-            <div class = "box-icons">
-                <a href="#"><i class='bx bxl-github'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <div class="social-icons">
+                <a href="https://github.com/Kalki767" target="_blank" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/kalkidankidane/" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
             </div>
             
-            
+            <div class="mobile-menu-btn">
+                <i class='bx bx-menu'></i>
+            </div>
         </header>
-       <div class="blackhole-box">
-        <video src="videos/blackhole.mp4" type="video/mp4" autoplay loop muted playsinline class="blackhole-video"></video>
-       </div>
 
-       <section class="hero">
-        <div class="hero_info">
-            <div class="hero_info_title">
-                <i class='bx bxl-sketch' ></i>
-                Back-End Developer Portfolio
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class='bx bxl-golang'></i>
+                    Backend Developer Portfolio
+                </div>
+                <h1 class="hero-title">Building <span class="gradient">powerful</span> backend <span class="gradient">solutions</span></h1>
+
+                <p class="hero-description">
+                    I'm a Backend Developer specializing in Golang, Python, and JavaScript, 
+                    with experience in Flutter for mobile development. I build efficient, 
+                    scalable applications with clean architecture and modern best practices.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary-btn"><i class='bx bx-code-block'></i> View Projects</a>
+                    <a href="#contact" class="btn secondary-btn"><i class='bx bx-send'></i> Contact Me</a>
+                </div>
             </div>
-            <h1>Providing <span class="gradient"> the best</span> Project<span class="gradient"> Experience </span></h1>
 
-            <p> I'm a Back-End Developer with a passion for creating 
-                efficient and scalable web applications. I'm dedicated
-                to delivering high-quality code and exceptional user experiences.
-                Check out my skills and projects below.
+            <div class="hero-visual">
+                <div class="orbit-container">
+                    <div class="orbit">
+                        <div class="planet p1"><i class='bx bxl-golang'></i></div>
+                        <div class="planet p2"><i class='bx bxl-python'></i></div>
+                        <div class="planet p3"><i class='bx bxl-flutter'></i></div>
+                        <div class="planet p4"><i class='bx bxl-javascript'></i></div>
+                    </div>
+                    <div class="core-circle"></div>
+                </div>
+            </div>
 
-            </p>
-            <button><i class='bx bx-send' ></i> Contact Me</button>
-        </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <p>Scroll down</p>
+            </div>
+        </section>
 
-        <div class="hero_vid_box">
-            <video src="videos/hero-video.mp4" type="video/mp4" autoplay loop muted playsinline class="hero_vid"></video>
-        </div>
-
-        <div class="scroll-down">
-
-        </div>
-       </section>
-
-       <section class="info-section">
-            <h1 class="section-title">Hello, There 👋</h1>
-            <div class="info-cards">
-                <div class="card">
-                    <h1>Hi there, I'm Kalkidan</h1>
-                    <p> With over a year of experience in backend and mobile app development, I've honed my skills in creating robust and scalable systems.
+        <section id="about" class="about-section">
+            <h2 class="section-title">About Me <span class="emoji">👋</span></h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Hello, I'm Kalkidan</h3>
+                    <p>
+                        With over a year of experience in backend and mobile app development, 
+                        I've honed my skills in creating robust and scalable systems.
                         I'm a quick learner and always eager to take on new challenges.
                     </p>
-
-                    <img src="images/grid1.png" alt="card-image">
+                    <div class="card-image">
+                        <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Code on screen">
+                    </div>
                 </div>
 
-                <div class="card">
-                    <h1>Tech Stack</h1>
-                    <p> I specialize in a variety of languages, frameworks,
-                        and tools that allow me to build robust and scalable applications.
+                <div class="about-card">
+                    <h3>Tech Philosophy</h3>
+                    <p>
+                        I believe in writing clean, maintainable code that solves real problems.
+                        My approach prioritizes performance, security, and user experience with
+                        a focus on building solutions that scale.
                     </p>
-
-                    <img src="images/grid2.png" alt="card-image">
+                    <div class="card-image">
+                        <img src="https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Computer architecture">
+                    </div>
                 </div>
 
-                <div class="card">
-                    <h1>I am very flexible with time zone communications and locations</h1>
-                    <p> I am based in Ethiopia and I am available for remote work.
+                <div class="about-card featured">
+                    <h3>Available for Remote Work</h3>
+                    <p>
+                        Based in Ethiopia, I'm comfortable working across different time zones and collaborating
+                        with teams globally. I value clear communication and meeting deadlines.
                     </p>
-
-                    <video src="videos/glob.mp4" type = "video/mp4" autoplay loop muted playsinline class="glob-video"></video>
-
-                    <button><i class='bx bx-link-external'></i> Contact Me</button>
+                    <div class="globe-container">
+                        <div class="globe"></div>
+                    </div>
+                    <a href="#contact" class="btn card-btn"><i class='bx bx-envelope'></i> Get in Touch</a>
                 </div>
 
-                <div class="card">
-                    <h1>My Passion for Coding</h1>
-                    <p> I love solving problems and building things through code.
-                        Programming isn't just my profession-it's my passion.
-                        I enjoy exploring new technologies, and enhancing my skills.
-
+                <div class="about-card">
+                    <h3>My Passion for Coding</h3>
+                    <p>
+                        Beyond just a profession, programming is my passion. I enjoy solving complex problems,
+                        optimizing systems, and continuously learning new technologies to enhance my skills.
                     </p>
+                    <div class="card-image">
+                        <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Coding environment">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <img src="images/grid4.png" alt="card-image">
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">My Skills <span class="emoji">💻</span></h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3 class="gradient">
+                        <i class='bx bx-code-block'></i>
+                        Programming Languages
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <span class="skill-level">Advanced</span>
+                            <div class="skill-icon">
+                                <i class='bx bxl-golang' style="color: #00ACD7;"></i>
+                            </div>
+                            <span class="skill-name">Golang</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-level">Advanced</span>
+                            <div class="skill-icon">
+                                <i class='bx bxl-python' style="color: #FFD43B;"></i>
+                            </div>
+                            <span class="skill-name">Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-level">Intermediate</span>
+                            <div class="skill-icon">
+                                <i class='bx bxl-javascript' style="color: #F7DF1E;"></i>
+                            </div>
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-level">Intermediate</span>
+                            <div class="skill-icon">
+                                <i class='bx bxl-flutter' style="color: #0468D7;"></i>
+                            </div>
+                            <span class="skill-name">Flutter</span>
+                        </div>
+                    </div>
                 </div>
 
-            </div>
-       </section>
+                <div class="skills-category">
+                    <h3 class="gradient">
+                        <i class='bx bx-server'></i>
+                        Backend Development
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bx-data' style="color: #336791;"></i>
+                            </div>
+                            <span class="skill-name">PostgreSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bxl-mongodb' style="color: #47A248;"></i>
+                            </div>
+                            <span class="skill-name">MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bx-cloud' style="color: #FF9900;"></i>
+                            </div>
+                            <span class="skill-name">AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bx-server' style="color: #00ADD8;"></i>
+                            </div>
+                            <span class="skill-name">RESTful APIs</span>
+                        </div>
+                    </div>
+                </div>
 
-       <section class = "my-projects">
-        <h1 class="section-title">My Projects</h1>
+                <div class="skills-category">
+                    <h3 class="gradient">
+                        <i class='bx bx-wrench'></i>
+                        Tools & Technologies
+                    </h3>
+                    <div class="tools-grid">
+                        <div class="tool-item">
+                            <i class='bx bxl-git tool-icon'></i>
+                            <span class="tool-name">Git</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class='bx bxl-docker tool-icon'></i>
+                            <span class="tool-name">Docker</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class='bx bxl-kubernetes tool-icon'></i>
+                            <span class="tool-name">Kubernetes</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class='bx bx-terminal tool-icon'></i>
+                            <span class="tool-name">CI/CD</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class='bx bxl-firebase tool-icon'></i>
+                            <span class="tool-name">Firebase</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class='bx bx-test-tube tool-icon'></i>
+                            <span class="tool-name">Testing</span>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="project-card">
-            <div class="project-vidbox">
-                <video id = "projectvideo1" src="videos/project1.mp4" type="video/mp4" autoplay loop muted playsinline></video>
-                <div class="hover-sign"></div>
+                <div class="skills-category">
+                    <h3 class="gradient">
+                        <i class='bx bx-mobile-alt'></i>
+                        Mobile Development
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bxl-flutter' style="color: #0468D7;"></i>
+                            </div>
+                            <span class="skill-name">Flutter</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bxl-firebase' style="color: #FFCA28;"></i>
+                            </div>
+                            <span class="skill-name">Firebase</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bx-mobile' style="color: #3DDC84;"></i>
+                            </div>
+                            <span class="skill-name">Android</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bxl-apple' style="color: #999999;"></i>
+                            </div>
+                            <span class="skill-name">iOS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            </div>
-            <div class="project-info">
-                <h1>E-commerce <span class="gradient">Website</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-                <button><i class='bx bx-link-external'></i> Website</button>
-            </div>
-        </div>
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">My Projects <span class="emoji">🚀</span></h2>
 
-        <div class="project-card">
-            <div class="project-vidbox">
-                <video id = "projectvideo2" src="videos/project1.mp4" type="video/mp4" autoplay loop muted playsinline></video>
+            <div class="project-card">
+                <div class="project-preview">
+                    <img src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="E-commerce App" class="project-image">
+                </div>
+                <div class="project-details">
+                    <h3>E-commerce <span class="gradient">App</span></h3>
+                    <p>
+                        A Flutter mobile application for an e-commerce platform.
+                        Features include user authentication, product management, cart functionality, and
+                        order processing with payment integration.
+                    </p>
+                    <div class="project-tech">
+                        <span>Flutter</span>
+                        <span>Firebase</span>
+                        <span>Bloc</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kalki767/2024-internship-mobile-tasks/tree/985bd1c62c744dc8e4a42c1512c13bdd6515bc5b/e_commerce_app" target="_blank" rel="noopener noreferrer" class="btn project-btn secondary"><i class='bx bxl-github'></i> View Code</a>
+                    </div>
+                </div>
+            </div>
 
+            <div class="project-card reversed">
+                <div class="project-preview">
+                    <img src="https://images.pexels.com/photos/3243/pen-calendar-to-do-checklist.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Task Management API" class="project-image">
+                </div>
+                <div class="project-details">
+                    <h3>Task Management <span class="gradient">API</span></h3>
+                    <p>
+                        A RESTful API built with Golang and PostgreSQL that powers task management.
+                        Includes features like task creation, due dates, priority levels, notifications,
+                        and synchronization across devices.
+                    </p>
+                    <div class="project-tech">
+                        <span>Golang</span>
+                        <span>MongoDB</span>
+                        <span>JWT</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kalki767/Learning-Go/tree/main/Implementing_Authentication_and_Authorization_with_JWT_tokens" target="_blank" rel="noopener noreferrer" class="btn project-btn secondary"><i class='bx bxl-github'></i> View Code</a>
+                    </div>
+                </div>
             </div>
-            <div class="project-info">
-                <h1>E-commerce <span class="gradient"> Website</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-                <button><i class='bx bx-link-external'></i> Website</button>
-            </div>
-        </div>
 
-        <div class="project-card">
-            <div class="project-vidbox">
-                <video id = "projectvideo3" src="videos/project1.mp4" type="video/mp4" autoplay loop muted playsinline></video>
+            <div class="project-card">
+                <div class="project-preview">
+                    <img src="https://images.pexels.com/photos/7014766/pexels-photo-7014766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Real-time Chat Service" class="project-image">
+                </div>
+                <div class="project-details">
+                    <h3>Real-time Chat <span class="gradient">Service</span></h3>
+                    <p>
+                        A real-time chat application built with Golang and WebSockets.
+                        Features include private messaging, group chats, message encryption,
+                        and file sharing with cloud storage integration.
+                    </p>
+                    <div class="project-tech">
+                        <span>Golang</span>
+                        <span>WebSockets</span>
+                        <span>PostgreSQL</span>
+                        <span>JWT</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kalki767/Real-Time-Chat-Application" target="_blank" rel="noopener noreferrer" class="btn project-btn secondary"><i class='bx bxl-github'></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="more-projects">
+                <a href="https://github.com/Kalki767?tab=repositories" class="btn view-all-btn">View All Projects <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+        </section>
 
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Get In Touch <span class="emoji">📧</span></h2>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <p>
+                        I'm currently available for freelance work and full-time opportunities.
+                        If you have a project that needs a skilled backend developer or if you're
+                        looking to add a dedicated team member, I'd love to hear from you.
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class='bx bx-envelope'></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:kalkidankidane3@gmail.com">kalkidankidane3@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class='bx bx-map'></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Addis Ababa, Ethiopia (Remote Available)</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class='bx bx-time-five'></i>
+                            <div>
+                                <h4>Availability</h4>
+                                <p>Mon-Fri, 9AM-6PM (EAT) - Flexible</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/Kalki767" target="_blank" class="social-link"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/in/kalkidankidane/" target="_blank" class="social-link"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn submit-btn">
+                            <span>Send Message</span>
+                            <i class='bx bx-send'></i>
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="project-info">
-                <h1>Modern <span class="gradient">Portfolio</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-                <button><i class='bx bx-link-external'></i> Website</button>
-            </div>
-        </div>
+        </section>
         
-       </section>
-
-       <section class="skills-section">
-        <h1 class="section-title">
-            My Skills 💪
-        </h1>
-        <div class="skills-box">
-            <img class="skills-image" src="images\digital brain.png" alt="skills-image">
-
-            <div class="designer">
-                <h1 class="gradient"> Designer <i class='bx bx-laptop'></i></h1>
-                <p>I'm a designer with a passion for creating beautiful and functional designs.
-                    I'm dedicated to delivering high-quality designs and exceptional user experiences.
-                </p>
-            </div>
-
-            <div class="coder">
-                <h1 class="gradient"> Coder <i class='bx bx-code-block' ></i></h1>
-                <p>I'm a coder with a passion for creating beautiful and functional codes.
-                    I'm dedicated to delivering high-quality codes and exceptional user experiences.
-                </p>
-            </div>
-
-            <div class="slider" reverse = "true" style = "
-            --width: 100px;
-            --height: 100px;
-            --quantity: 9;
-            ">
-                <div class="list">
-                    <div class="item" style = "--position: 1;"><img src="images/1.png" alt="slider-image"></div>
-                    <div class="item" style = "--position: 2;"></div>
-                    <div class="item" style = "--position: 3;"></div>
-                    <div class="item" style = "--position: 4;"></div>
-                    <div class="item" style = "--position: 5;"></div>
-                    <div class="item" style = "--position: 6;"></div>
-                    <div class="item" style = "--position: 7;"></div>
-                    <div class="item" style = "--position: 8;"></div>
-                    <div class="item" style = "--position: 9;"></div>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class='bx bx-code-alt'></i>
+                    <span>Kalkidan</span>
+                </div>
+                <p>© 2025 Kalkidan. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
                 </div>
             </div>
-       </section>
-        
+        </footer>
     </div>
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
