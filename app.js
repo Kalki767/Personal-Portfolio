@@ -1,5 +1,3 @@
-// Previous JavaScript code remains unchanged
-// Remove video-related event listeners since we're using images now
 document.addEventListener('DOMContentLoaded', function() {
     // Header scroll effect
     const header = document.getElementById('header');
