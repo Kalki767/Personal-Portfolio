@@ -61,36 +61,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Contact form submission
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Validate form (basic validation)
-            if (!name || !email || !subject || !message) {
-                alert('Please fill out all fields');
-                return;
-            }
-            
-            // In a real application, you would send this data to a server
-            // For now, we'll just show a success message
             const submitBtn = contactForm.querySelector('.submit-btn');
             const originalBtnText = submitBtn.innerHTML;
             
+            // Disable form while submitting
             submitBtn.innerHTML = '<span>Sending...</span>';
             submitBtn.disabled = true;
             
-            // Simulate form submission
-            setTimeout(() => {
-                alert('Thank you for your message! I will get back to you soon.');
-                contactForm.reset();
+            const formData = new FormData(contactForm);
+            
+            try {
+                const response = await fetch('handle_contact.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    alert('Thank you for your message! I will get back to you soon.');
+                    contactForm.reset();
+                } else {
+                    alert(result.message || 'Failed to send message. Please try again.');
+                }
+            } catch (error) {
+                alert('An error occurred. Please try again later.');
+                console.error('Form submission error:', error);
+            } finally {
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
-            }, 1500);
+            }
         });
     }
 
